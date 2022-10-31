@@ -45,7 +45,7 @@ public class App {
 //         courseDao.saveCourse(course1);
 //         courseDao.saveCourse(course2);
 //        System.out.println(courseDao.getCourseById(1L));
-//        System.out.println(courseDao.getAllCourses());
+//       System.out.println(courseDao.getAllCourses());
 //        courseDao.updateCourse(new Course(),2L);
 //         courseDao.deleteCourseById(2L);
 //        System.out.println(courseDao.getCourseByName("Java"));
@@ -61,11 +61,12 @@ public class App {
 //        System.out.println(taskDao.getAllTaskByLessonId(2L));
 //        System.out.println(taskDao.deleteTaskById(1L));
 
-//          instructorDao.saveInstructorTable(instructor1);
+ //        instructorDao.saveInstructorTable(instructor1);
 //          instructorDao.saveInstructorTable(instructor2);
 //        instructorDao.updateInstructor(new Instructor(),1L);
 //        System.out.println(instructorDao.getInstructorById(2L));
-//          instructorDao.deleteInstructorById(2L);
+//        instructorDao.deleteInstructorById(2L);
+          instructorDao.assignInstructorToCourse(3L,1L);
 
     }
 

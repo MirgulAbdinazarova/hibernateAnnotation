@@ -73,6 +73,14 @@ public class InstructorDaoImpl {
     }
 
     public void  assignInstructorToCourse(Long instructorId,Long courseId) {
-
+       entityManager.getTransaction().begin();
+       Instructor instructor = entityManager.find(Instructor.class,instructorId);
+       Course course = entityManager.find(Course.class,courseId);
+       instructor.getCourses().add(course);
+       course.getInstructors().add(instructor);
+       entityManager.merge(instructor);
+       entityManager.merge(course);
+       entityManager.getTransaction().commit();
+       entityManager.close();
     }
 }
